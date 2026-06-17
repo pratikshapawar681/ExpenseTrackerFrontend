@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Expense Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+<div class="sidebar">
+
+
+<div class="sidebar-logo">
+
+<img src="assets/logo.png">
+
+<h2>
+Expense Tracker
+</h2>
+
+</div>
+
+
+<ul>
+
+<li onclick="loadDashboard()">
+Dashboard
+</li>
+
+
+<li onclick="showExpenses()">
+Expenses
+</li>
+
+
+<li onclick="showBudget()">
+Budget
+</li>
+
+
+<li onclick="logout()">
+Logout
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+<div class="main-content">
+
+
+<h1>
+Financial Dashboard
+</h1>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Total Budget</h3>
+
+<h2 id="totalBudget">
+0
+</h2>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>Total Expense</h3>
+
+<h2 id="totalExpense">
+0
+</h2>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>Remaining</h3>
+
+<h2 id="remaining">
+0
+</h2>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div id="expenseSection"
+class="section">
+
+
+<h2>
+Add Expense
+</h2>
+
+
+<input id="title"
+placeholder="Title">
+
+
+<input id="amount"
+placeholder="Amount">
+
+
+<input id="category"
+placeholder="Category">
+
+
+<button onclick="addExpense()">
+Add Expense
+</button>
+
+
+
+<h3>
+Your Expenses
+</h3>
+
+
+<div id="expenseList">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="budgetSection"
+class="section">
+
+
+<h2>
+Add Budget
+</h2>
+
+
+
+<input id="month"
+placeholder="Month">
+
+
+<input id="budgetAmount"
+placeholder="Budget Amount">
+
+
+<button onclick="addBudget()">
+
+Save Budget
+
+</button>
+
+
+
+<h3>
+Your Budgets
+</h3>
+
+
+<div id="budgetList">
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="js/config.js"></script>
+
+<script src="js/dashboard.js"></script>
+<script src="js/expenses.js"></script>
+<script src="js/budget.js"></script>
+
+
+
+</body>
+
+</html>
