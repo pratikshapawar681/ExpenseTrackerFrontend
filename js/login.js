@@ -6,11 +6,12 @@ async function loginUser() {
     const password =
         document.getElementById("password").value;
 
-    if (email === "" || password === "") {
 
+    if (email === "" || password === "") {
         alert("Fill all fields");
         return;
     }
+
 
     try {
 
@@ -20,17 +21,19 @@ async function loginUser() {
                 method: "POST",
 
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/x-www-form-urlencoded"
                 },
 
-                body: JSON.stringify({
-                    email: email,
+                body: new URLSearchParams({
+                    username: email,
                     password: password
                 })
             }
         );
 
+
         const data = await response.json();
+
 
         if (response.ok && data.access_token) {
 
@@ -39,10 +42,13 @@ async function loginUser() {
                 data.access_token
             );
 
+
             alert("Login Successful");
+
 
             window.location.href =
                 "dashboard.html";
+
 
         } else {
 
@@ -51,6 +57,7 @@ async function loginUser() {
                 "Invalid email or password"
             );
         }
+
 
     } catch (error) {
 
